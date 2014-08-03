@@ -1,0 +1,522 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<head>
+<title>CEC EPK</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="flexcrollstyles.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+body {
+	background-color: #333333;
+	color:#333;
+	font-size: 12px;
+	overflow: hidden;
+	font-family: Arial, Helvetica, sans-serif;
+
+}
+
+h1 {
+	text-align: right;
+	margin-right: 10px;
+	text-transform: uppercase;
+	font-size: 30px;
+	color: #666;
+	border-bottom: 2px dotted #f38630;
+}
+
+h2 { color: #7795A1; }
+
+
+
+#wrapper {
+	position: relative;
+	width: 960px;
+	margin: 0 auto;
+	text-align: left;
+}
+
+#hero-slider {
+	text-align:left;
+	width:610px;
+	position: absolute;
+	top: 200px;
+	left: 40px;
+	z-index: 2;
+	height: 410px;
+}
+
+#mask { 
+	width:600px; 
+	height:400px; 
+	position: relative;
+	margin:0px 0 0 10px; 
+	overflow-y:hidden;
+
+}
+
+#hero-slider .panel { 
+	float: left;
+	width:560px; 
+	height:400px; 
+	padding: 0px 15px;
+	position: relative;
+	overflow: hidden;
+	line-height: 15px;
+	text-align:justify;
+}
+
+
+.bglink {
+display: block;
+z-index: 10000;
+width: 125px;
+position: absolute;
+top: 50px; 
+text-indent: -999em;	
+height: 120px;
+left: 45px;
+}
+
+.bglink a {outline: none; display: block; height: inherit; width: inherit: }
+
+.bglink a:hover, a:visited, a:active {outline:none;}
+
+
+A:link { outline : none; font-size: 12px; text-decoration: none; color:#ED882F; font-weight:bold; } 
+
+A:visited { font-size: 12px; text-decoration: none; color:#ED882F; font-weight:bold; } 
+
+A:active { font-size: 12px; text-decoration: none; color:#ED882F; font-weight:bold; } 
+
+A:hover { font-size: 12px; text-decoration: none; color:#aaa; text-decoration:underline; font-weight: bold;}
+
+
+#mycustomscroll {
+/* Typical fixed height and fixed width example */
+width: 550px;
+padding-right: 10px;
+height: 395px;
+overflow-y: auto;
+
+outline:none;
+/* IE overflow fix, position must be relative or absolute*/
+position: relative;
+
+}
+
+
+div.listwrap
+{
+  float: left;
+  width: 15em;
+}
+div.listwrap2
+{
+  float: left;
+  width: 15em;
+}
+
+
+/* clear float after lists */
+br
+{
+  clear: left;
+}
+
+ol li a
+{
+  display: block;
+  width: 7em;
+  text-decoration: none;
+}
+ol li a:hover
+{
+  color: #FFF; /* white */
+  background-color: #A52A2A; /* brown */
+}
+
+
+
+</style>
+<script type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<script src="cufon-yui.js" type="text/javascript"></script>
+<script src="DIN_900.font.js" type="text/javascript"></script>
+<script type="text/javascript">
+	Cufon.replace('h1'); // Works without a selector engine
+	Cufon.replace('#sub1'); // Requires a selector engine for IE 6-7, see above
+</script>		
+
+<script type='text/javascript' src="flexcroll.js"></script>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="jquery.scrollto.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+
+	$('#slide-link a').click(function () {
+	
+		//reset all the items
+		$('#slide-link a').removeClass('active');
+		
+		//set current item as active
+		$(this).addClass('active');	
+		
+		//scroll it to the right position
+		$('#mask').scrollTo($(this).attr('rel'), 700, {easing:'easeOutBack'});
+		
+		//disable click event
+	    return false;		
+		
+	});
+	
+});
+
+
+</script>
+
+	
+
+
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onLoad="MM_preloadImages('images/epk_03.jpg','images/epk_05.jpg','images/epk_07.jpg','images/epk_08.jpg','images/epk_09.jpg','images/epk_10.jpg','images/epk_11.jpg')">
+<!-- ImageReady Slices (epk_layout.psd) -->
+
+<div id="wrapper">
+<div class="bglink" id="slide-link"><a href="#main" rel="#main">DERPSICLES</a></div>
+
+<table id="slide-link" width="960" height="620" border="0" cellpadding="0" cellspacing="0">
+
+	<tr>
+		<td colspan="6">
+			<img src="images/epk_01.jpg" alt="" width="960" height="194" border="0" usemap="#Map"></td>
+	</tr>
+	<tr>
+		<td rowspan="4">
+			<img src="images/epk_02.jpg" width="658" height="426" alt=""></td>
+		<td><a href="#print" rel="#print" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image16','','images/epk_03.jpg',1)"><img src="images/epk_ov_03.jpg" name="Image16" width="129" height="128" border="0"></a></td>
+		<td rowspan="4">
+			<img src="images/epk_04.jpg" width="11" height="426" alt=""></td>
+		<td colspan="2"><a href="#speakers" rel="#speakers" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image17','','images/epk_05.jpg',1)"><img src="images/epk_ov_05.jpg" name="Image17" width="128" height="128" border="0"></a></td>
+		<td rowspan="4">
+			<img src="images/epk_06.jpg" width="34" height="426" alt=""></td>
+	</tr>
+	<tr>
+		<td><a href="#online" rel="#online" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image18','','images/epk_07.jpg',1)"><img src="images/epk_ov_07.jpg" name="Image18" width="129" height="148" border="0"></a></td>
+		<td colspan="2"><a href="#concert" rel="#concert" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image19','','images/epk_08.jpg',1)"><img src="images/epk_ov_08.jpg" name="Image19" width="128" height="148" border="0"></a></td>
+	</tr>
+	<tr>
+		<td><a href="#general" rel="#general" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image20','','images/epk_09.jpg',1)"><img src="images/epk_ov_09.jpg" name="Image20" width="129" height="137" border="0"></a></td>
+		<td><a href="#films" rel="#films" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image21','','images/epk_10.jpg',1)"><img src="images/epk_ov_10.jpg" name="Image21" width="69" height="137" border="0"></a></td>
+		<td><a href="#fests" rel="#fests" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image22','','images/epk_11.jpg',1)"><img src="images/epk_ov_11.jpg" name="Image22" width="59" height="137" border="0"></a></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/epk_12.jpg" width="129" height="13" alt=""></td>
+		<td colspan="2">
+			<img src="images/epk_13.jpg" width="128" height="13" alt=""></td>
+	</tr>
+	
+</table>
+
+
+<div id="hero-slider">
+
+<div id="mask">
+
+<!-- PANEL #1: HOMEPAGE !-->			
+			
+<div class="panel" id="main">
+
+
+<h1>ABOUT CEC</h1>
+<p>
+Since 1965 Campus Events Commission (CEC) has been one of the largest purveyors of campus enter tainment. From its inception, it has acquired a reputation for its edgy style of advertising and controversial events. CEC has been responsible for hosting the Jack Benny and Spencer Tracy Award shows, and for holding the renowned Shorttakes Student Film Festival.</P>
+<P>
+Still pushing the envelope today, CEC has remained a student-run, student-funded organization, dedicated to introducing the freshest fare in film, music and speakers into the UCLA community. From hosting weekly free-$ movies to unabashedly showcasing free sneaks of films before they hit theatres, CEC has become the students' premiere source for new cinema. CEC also brings the best in music programming to students by providing free quarterly concerts in various venues throughout the UCLA campus, as well as booking bands and artists to perform at the annual Bruin Bash.</P>
+<P>
+In addition to providing new film and music, CEC coordinates speaking events from an eclectic variety of dignitaries. In the past, CEC has been responsible for obtaining speakers that range from Martin Luther King Jr. to Morgan Freeman and Michael Moore. Be it media seen or heard, Campus Events Commission is constantly in search of that which is as evocative and diverse as its audience.</p>
+
+
+
+</div>
+
+<!-- END PANEL #1: MAIN !-->
+
+
+
+
+
+
+
+<!-- PANEL #2: PRINT !-->				
+				
+<div class="panel" id="print">
+	<h1>PRINT MARKETING</h1>
+	<p>Campus Events Commission's Print Marketing is a compilation of student designers from the UCLA campus. Print marketing creates every identity for each concert, film, and speakers event, as well as various CEC brand material. Not only limited to graphic design, Print Marketing strives to explore new mediums of advertisement through video and collaborations with web. This collective approaches graphic design and advertisement as an opportunity to build off of creativity, and continues to maintain its position as the leading student advertising group on campus. Members from the Print Marketing staff have also gained recognition for their designs from publicized design communities. This staff works with General Marketing to get the word out about events in designing film calendars found every week on campus, and all of the print graphics. Like capitalism, without advertising Campus Events would crumble.</p>
+</div>
+
+<!-- END PANEL #2: PRINT !-->
+
+
+
+
+
+
+
+<!-- PANEL #3: SPEAKERS !-->
+
+<div class="panel" id="speakers">
+<div id="mycustomscroll" class="flexcroll">
+<h1>SPEAKERS</h1>
+<p>
+The Campus Events Commission Speakers Program is committed to providing an open forum for a diverse range of topics and speakers across multiple disciplines - from the arts and entertainment, to the environment and entrepreneurship, and everything in between. Our speaking engagements range in scope from packed lectures and comedic performances to intimate conversations with the best and brightest thinkers and doers of today. Whether primarily educational or entertaining in nature, our events are always thought provoking - reflecting the latest trends in social, cultural and political issues. The Speakers Program is the perfect way to engage students in intellectual debates, or to promote upcoming projects in the fields of literature, film and television, among others. Previous Speaking Engagements Include:</p>
+<ul>
+<li>Chuck Klosterman</li>
+<li>Michael Moore</li> 
+<li>Tony Hawk</li>
+<li>Michio Kaku</li>
+<li>Dave Chappelle</li>
+<li>DJ Panel (A-Trak, DJ Skeet Skeet and Gary Richards)</li>
+<li>Aziz Ansari</li>
+<li>Sociological Investigation of the Hipster (Tao Lin, Gavin McInnes, Mark Hunter)</li> 
+<li>Stan Lee</li>
+<li>NBC's Community Q&A with creator/executive producer Dan Harmon, Yvette Nicole Brown,
+Donald Glover and Alison Brie</li> 
+<li>Dave Eggers</li>
+<li>Frank Warren (Postsecret)</li>
+<li>Christian Lander (Stuff White People Like)</li> 
+<li>Joseph Gordon-Levitt</li> 
+<li>Tucker Max</li> 
+<li>Matt Groening</li> 
+<li>Chuck Palahniuk</li>
+<li>Bobby Kim (The Hundreds)</li>
+
+</ul></div>
+</div>
+				
+<!-- END PANEL #3: SPEAKERS !-->
+
+
+
+
+<!-- PANEL #4: ONLINE !-->				
+				
+<div class="panel" id="online">
+	<h1>ONLINE MARKETING</h1>
+	<p>Campus Events Commission boasts an extensive online presence, which has been continually expanded and carefully maintained by the Online Marketing Team. Event information is dispersed throughout campus with daily updates to the Commission's personal Facebook and Twitter pages, which reach in excess of 4000 students combined. Online Marketing also designs and distributes a weekly newsletter that highlights upcoming CEC events and special offers for a readership of over 6500 students. Online Marketing staff utilizes all of these mediums to give interested students the information they need in a medium they prefer.</p>
+<p>The primary hub of CEC's publicity efforts focuses on Online Marketing's self designed, central web site. This information nexus houses not only event information, but a general interest blog maintained by all the staffs and a deeply extensive event archive spanning back to 1977. Online Marketing keeps the page always up to date, rapidly responding to changes as they occur. Online Marketing also uses the site to manage the Audience Appreciation program, which rewards frequent attendees for their continued support. Using these combined methods of web marketing and information distribution, Online Marketing forms the primary mode of contact between the Commission and the student body we serve.</p>
+</div>
+
+<!-- END PANEL #4: ONLINE !-->
+
+
+
+
+<!-- PANEL #5: CONCERTS !-->				
+				
+<div class="panel" id="concert">
+	<h1>CONCERTS</h1>
+Campus Events Commission brings about a great variety of artists to UCLA's campus each year. We provide an ideal opportunity for artists to generate support for tours, promote albums, and gain exposure in a key college market of some 40,000 students. Students are able to kick off the school year with Bruin Bash and also look forward to summer with our annual spring concerts. These are held in some of our larger venues including Ackerman Grand Ballroom, Drake Stadium, and the renowned Pauley Pavilion. Beyond the larger concerts, we also produce many smaller, more intimate shows at the very heart of the UCLA campus in Kerckhoff Grand Salon, Bruin Plaza, and Broad Art Center. We also provide sound equipment, tech crews, and on-campus promotion. All of our concerts are free, closed, and for students-only, creating the ideal concert environment for both artists and students. Past artists include:<br>
+<div class="listwrap">
+<ul>
+  <li>LMFAO</li>
+  <li>Clipse</li>
+  <li>Islands</li>
+  <li>Ying Yang Twins</li>
+  <li>Girl Talk</li>
+  <li>Beach House</li>
+  <li>The Roots</li>
+  <li>Franz Ferdinand</li>
+  <li>Broken Social Scene</li>
+  <li>Dizzee Rascal</li>
+  </ul>
+</div>
+
+<div class="listwrap">
+<ul>
+  <li>Baths</li>
+  <li>Young the Giant</li>
+  <li>Far East Movement</li>
+  <li>Best Coast</li>
+  <li>E-40</li>
+  <li>Black Lips</li>
+  <li>N.E.R.D.</li>
+  <li>Wale</li>
+  <li>J. Cole</li>
+  <li>Jay-Z</li>
+  </ul>
+</div>
+
+<div class="listwrap">
+<ul>
+  <li>Bloc Party</li>
+  <li>Matt & Kim</li>
+  <li>Grizzly Bear</li>
+  <li>Rocky Votolato</li>
+  <li>Super Mash Bros</li>
+  <li>Yeasayer</li>
+  <li>Warpaint</li>
+  <li>Islands</li>
+  <li>Travie Mccoy</li>
+  <li>Ghostface Killah</li>
+  </ul></div>
+
+<br />
+
+</div>
+<!-- END PANEL #5: CONCERTS !-->
+
+<!-- PANEL #6: GENERAL !-->				
+				
+<div class="panel" id="general">
+	<h1>GENERAL MARKETING</h1>
+	<p>General Marketing provides the service and quality of a veteran marketing firm combined with the vitality and creativity that comes from being part of one of the largest and most diverse student groups. With an intrinsic understanding of student and market trends, a creative approach to marketing solutions, and a set of core values combining corporate professionalism with guerilla sensibilities. GM Staffers represent some of the best marketing talent UCLA has to offer and they pride themselves on the ability to take any event and make it a success.</p>
+<p>GM Staff is responsible for the brand management of CEC as a whole. Not only does the staff maintain the visual appearance of the brand, they also propagate the brand identity across campus and surrounding areas. General Marketing produces numerous marketing materials that are passed out at events and in promotion of events. General Marketing sees to it that the organization is not only recognizable but synonymous with cutting edge entertainment.</p>
+
+
+</div>
+
+<!-- END PANEL #6: GENERAL !-->
+
+
+<!-- PANEL #7: FILMS !-->				
+				
+<div class="panel" id="films">
+<div id="mycustomscroll" class="flexcroll">
+	<h1>FILMS</h1>
+	<p>Campus Events Commission (CEC) is a	student-run group that programs most of the university's entertainment events. Our	branch is responsible for the largest campus in the country.</p>
+	<p>
+We screen the	in UCLA's Ackerman Grand Ballroom, a theatre-like auditorium with 1,000 seat capacity (though sneaks usually seat 200-600 depending on studio preference). Ackerman features 20' x 40' screen dimension, Dolby Stereo Sound, and 35mm screen capability with platter system, handled by our trained and experienced projectionists. We also offer the option to screen on DVD or off laptop with DVD/LCD projectors.</p>
+<p>
+<h2 id="sub1">Past screenings + Q&A events:</h2>
+<ul id="one">
+<li>HBO's HOW TO MAKE IT IN AMERICA | creator/writer/exec. producer Ian Edleman; stars Bryan Greenberg, Victor Rsuk</li>
+<li>BOONDOCKS SAINTS II | director/writer Troy Duffy; stars Sean Patrick Flanery, Norman Reedus, Clifton Collins Jr.</li>
+<li>THE MESSENGER | writer Alessandro Camon</li>
+<li>THE ROAD | producers Steve Schwartz, Paula Mae Schwartz</li>
+<li>THE DARJEELING LIMITED | Wes Anderson, Adrien Brody, Roman Coppolla</li>
+<li>WAH DO DEM | Q&A directors/writers Ben Chace, Sam Fleischner; star/musician Sean Bones</li>
+<li>THE FLYING SCISSSORS | Q&A writer/producer Blake Harris</li>
+<li>ONG BAK II | Muy Thai demo w/ Andy Wilson + company</li>
+<li>GOOD DICK | Q&A director/writer/producer/star Marianna Palka; producer/star Jason Ritter</li>
+<li>NOBEL SON | Q&A director/writer Randall Miller; star Alan Rickman</li>
+<li>LYMELIFE | Q&A director/writer Derrick Martini</li>
+<li>IT'S ALWAYS SUNNY IN PHILADELPHIA | Q&A creator/writer/producer Rob McElhenney</li>
+<li>REPO! THE GENETIC OPERA | Q&A director Darren Lynn Bousman</li>
+<li>PIRATES II: STAGNETTI'S REVENGE | Q&A panel on adult industry w/ director Joone,
+producer/CEO Digital Playground Samantha Lewis, stars Evan Stone, Sasha Grey</li>
+</ul>
+
+</p>
+
+<p>
+<h2 id="sub1">Past Sneaks include:</h2>
+<div class="listwrap">
+<ul id="col1">
+  <li>Toy Story 3</li>
+  <li>127 Hours</li>
+  <li>Buried</li>
+  <li>Shutter Island</li>
+  <li>Fantastic Mr. Fox</li>
+  <li>Zombieland</li>
+  <li>A Single Man</li>
+  </ul>
+</div>
+
+<div class="listwrap">
+<ul id="col2">
+  <li>Juno</li>
+  <li>Slumdog Millionaire</li>
+  <li>300</li>
+  <li>Forgetting Sarah Marshall</li>
+  <li>Sunshine Cleaning</li>
+  <li>Adventureland</li>
+  <li>Eagle Eye</li>
+  </ul>
+</div>
+
+<div class="listwrap">
+<ul id="col3">
+  <li>Role Models</li>
+  <li>Taken</li>
+  <li>Body of Lies</li>
+  <li>Disney's Earth</li>
+  <li>From Paris with Love</li>
+  <li>When in Rome</li>
+  </ul></div></p>
+
+<br>
+
+
+</div></div>
+
+
+
+<!-- END PANEL #7: FILMS !-->
+
+
+<!-- PANEL #8: FESTS !-->				
+				
+<div class="panel" id="fests">
+<div id="mycustomscroll" class="flexcroll">
+	<h1>FILM FESTIVALS</h1>
+	<p>The CEC Festivals Department works to put on UCLA's two biggest film festivals, Campus MovieFest and the Shorttakes Student Film Festival.</p>
+<p>
+<h2 id="sub1">Campus MovieFest - <a href="http://www.campusmoviefest.com" target="_blank">campusmoviefest.com</a></h2>
+Campus MovieFest is nationwide campus-touring program that provides students all they need to create a film within a week. CEC works with Campus MovieFest to rent and staff campus venues, and direct online, in-person, and creative marketing. Due to CEC's extensive and thorough audience reach, UCLA now puts on Campus MovieFest's largest local festival, receiving over 100 sign-ups and over 300 attendees, thanks to CEC.</p>
+<p>
+<h2 id="sub1">Shorttakes Student Film Festival - <a href="http://www.cecshorttakes.com" target="_blank">cecshorttakes.com</a>
+</h2>
+Shorttakes is UCLA's only film festival created, directed, and produced entirely by UCLA undergrads. Drawing on the ingenuity of a small but dedicated team, Shorttakes recently went green by switching to online submissions and judging. The Shorttakes Film Festival has had many esteemed judges in the past, such as:</p>
+<ul>
+<li>Andrew J. Cohen (Producer; 40-Year-Old Virgin, Talladega Nights, Funny People)</li>
+<li>Steven Banks (Writer; Spongebob Squarepants, CatDog)</li>
+<li>Paul Schrader (Writer/director; Taxi Driver, Blue Collar, Raging Bull, Affliction)</li> <li>Norman Buckley (Director/editor; Gossip Girl, Chuck, Melrose Place, 90210, Greek, The O.C.)</li>
+<li>Gregory Poirier (Writer; Lion King 2, Tomcats, National Treasure 2)</li>
+<li>Randy Cartwright (Writer/animator; Pocahontas, Hercules, Aladdin, Princess and the Frog)</li>
+<li>Nancy Cartwright (Voicework; Bart Simpson and Ralph in The Simpsons)</li>
+</ul></p>
+
+<p>
+In the past, Shorttakes has been sponsored companies such as Flip Video, Kodak Motion Picture Film, Entertainment Weekly, Filter Magazine, Rotten Tomatoes, Campus Circle, Indie 103.1, Underground Film, and Giant Robot. Many past Shorttakes Film Festival winners have gone onto later fame, such as ShaneAcker, the creator and director of the animated feature film 9.</p>
+
+
+</div></div>
+
+<!-- END PANEL #8: FESTS !-->
+
+
+</div> <!-- end "mask" -->
+</div> <!-- end "hero-slider" -->
+</div> <!-- end "wrapper" -->
+<!--[if IE 6]>
+<script type="text/javascript"> Cufon.now(); </script>
+<![endif]-->
+
+
+</body>
+</html>

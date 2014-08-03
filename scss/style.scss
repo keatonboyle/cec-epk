@@ -1,0 +1,498 @@
+$cec-yellow: rgb(250, 226, 45);
+$slider-border-thin-thickness: 1px;
+$slider-border-thin: $slider-border-thin-thickness solid $cec-yellow;
+$slider-border-thick-thickness: 2px;
+$slider-border-thick: $slider-border-thick-thickness solid $cec-yellow;
+$slider-border-self-separation: 2px;
+$slider-border-slider-separation: 1px;
+$slider-border-total-space: $slider-border-slider-separation + $slider-border-thick-thickness + 
+                            $slider-border-self-separation + $slider-border-thin-thickness;
+
+$slider-body-space-y: 360px;
+$slider-body-space-x: 1360px;
+
+$slider-pane-height: $slider-body-space-y - 2*$slider-border-total-space;
+
+$slider-arrow-height: 60px;
+
+
+$two-column-list-indent: 15px;
+
+$grid-tile-bg: url("../img/epk_backgroundtile.png");
+$cec-logo: url("../img/cec_logo.png");
+$cec-logo-small: url("../img/cec_logo_smaller.png");
+
+$num-panes: 11;
+
+$title-font: "bebas_neueregular", Arial, sans-serif;
+
+$title-font-line-height-offset: 14px;
+
+$pane-content-hanging-image-margin: 90px;
+
+$content-font: "uclaleoregular", "Times New Roman", serif;
+$content-font-bold: "uclaleobold", "Times New Roman", serif;
+$content-font-size: 14px;
+$content-column-separation: 20px;
+
+$text-link-width: 200px;
+
+$content-column-width: ($slider-body-space-x - $pane-content-hanging-image-margin) / 2 
+                       - $content-column-separation - $text-link-width;
+
+@mixin no-bullets {
+  list-style: none;
+  list-style-type: none !important;
+}
+
+
+* {
+   margin: 0px;
+   padding: 0px;
+}
+html { height: 100%; width: 100%;}
+body {
+   background: $grid-tile-bg;
+   min-height: 100%;
+   min-width: 100%;
+}
+body:after {
+  position: fixed;
+  content: '';
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,1));
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,255,0)), to(rgba(255,255,255,1)));
+  z-index: -1;
+}
+
+
+div.horizontal_slider {
+   display: block;
+   width: 100% * $num-panes;
+   height: $slider-pane-height;
+   position: absolute;
+   top: $slider-border-total-space;   
+   left: 0px;
+   font-size: 0px;
+   background: $cec-yellow;
+   white-space: nowrap;
+}
+
+
+div.horizontal_pane {
+   display: inline-block;
+   width: 100% / $num-panes;
+   height: 100%;
+   position: relative;
+   vertical-align: top;
+   overflow: hidden;
+   white-space: normal;
+
+}
+
+
+
+div.pane_body {
+  display:block;
+  width: $slider-body-space-x;
+  margin-left: auto;
+  margin-right: auto;
+  background: none;
+  //background: rgb(230,230,230);
+  height: 100%;
+  font-size: 0;
+  vertical-align: top;
+
+  .top_bar {
+    display: block;
+    padding-top: 10px;
+    position: relative;
+    overflow: hidden;
+
+    .title {
+      float: left;
+      padding-left: $pane-content-hanging-image-margin + $text-link-width;
+      display: inline-block;
+      font-family: $title-font;
+      font-size: 100px;
+      line-height: 100px;
+      background: $cec-logo-small;
+      background-repeat: no-repeat;
+      background-origin: padding-box;
+      background-position: $text-link-width $title-font-line-height-offset;
+    }
+
+    .director_box {
+      float: right;
+      padding-right: $text-link-width;
+      display: inline-block;
+      text-align: right;
+
+      div {
+        font-size: $content-font-size;
+        display: block;
+
+        &.director_title {
+          font-family: $content-font-bold;
+          margin-top: $title-font-line-height-offset;
+        }
+
+        &.director_name {
+          font-family: $content-font;
+        }
+      }
+
+      a.director_email
+      {
+        font-size: $content-font-size;
+        display: block;
+        font-family: $content-font;
+        text-decoration: none;
+        color: black;
+        &:hover { text-decoration: underline; }
+      }
+
+    }
+  }
+
+
+  .pane_content {
+    font-size: $content-font-size;
+    font-family: $content-font;
+    display: block;
+    padding-top: 10px;
+
+    .left
+    {
+      float: left;
+      padding-left: $pane-content-hanging-image-margin + $text-link-width;
+      text-align: justify;
+      width: $content-column-width;
+    }
+
+    .right
+    {
+      float: right;
+      text-align: justify;
+      width: $content-column-width;
+      padding-right: $text-link-width;
+    }
+
+    span.bold { font-family: $content-font-bold; }
+
+    a 
+    { 
+      font-family: $content-font-bold;
+      text-decoration: none;
+      color: black;
+      &:hover { text-decoration: underline; }
+    }
+      
+    .smallgap { display: block; height: 5px; }
+      
+  }
+
+
+  .home_graphic {
+    font-family: $title-font;
+    font-size: 100px;
+    line-height: 90px;
+    min-height: 210px;
+    
+    background: $cec-logo;
+    background-size: 200px 200px;
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+    background-position: 0px 20px;
+
+    padding-left: 220px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+
+}
+
+div#master_wrapper {
+   position: absolute;
+   top: 0px;
+   bottom: 0px;
+   left: 0px;
+   right: 0px;
+   font-size: 0;
+   min-width: $slider-body-space-x;
+   white-space: nowrap;
+   overflow-x: hidden;
+}
+
+div#content_wrapper {
+   height: 540px;
+   width: 100%;
+   min-width: $slider-body-space-x;
+   position: relative;
+   font-size: 12px;
+   white-space: nowrap;
+}
+
+div#slider_wrapper {
+   height: $slider-body-space-y;
+   background: white;
+   white-space: normal;
+
+   div.arrow
+   {
+     z-index: 4;
+     content: '';
+     width: 0px;
+     height: 0px;
+     background: none;
+     position: absolute;
+     cursor: pointer;
+     top: ($slider-body-space-y - $slider-arrow-height) / 2;
+     border-top: solid transparent $slider-arrow-height/2;
+     border-bottom: solid transparent $slider-arrow-height/2;
+     border-left: solid black 20px;
+     border-right: solid black 20px;
+
+     &.disabled
+     {
+       display: none;
+     }
+
+     &.right_arrow 
+     { 
+       border-right: none;
+       right: 20px;
+     }
+     &.left_arrow 
+     { 
+       border-left: none;
+       left: 20px;
+     }
+   }
+}
+
+div.horizontal_slider_placeholder {
+   width: 100%;
+   position: relative;
+   overflow-x: hidden;
+
+}
+
+
+#slider_wrapper:before {
+   content: '';
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   right: 0px;
+   height: $slider-border-self-separation;
+   border-top: $slider-border-thin;
+   border-bottom: $slider-border-thick;
+}
+
+#slider_wrapper:after{
+   content: '';
+   position: absolute;
+   bottom: 0px;
+   left: 0px;
+   right: 0px;
+   height: $slider-border-self-separation;
+   border-top: $slider-border-thick;
+   border-bottom: $slider-border-thin;
+}
+
+div#bottom_bar {
+   height: 100px;
+   margin-top: 60px;
+   overflow: hidden;
+
+}
+
+div.pane_link{
+   height: 100px;
+   display: inline-block;
+   position: relative;
+   margin-left: 9px;
+   margin-right: 9px;
+   font-size: 0;
+   cursor: pointer;
+
+   &:first-child{ margin-left: 0; }
+   &:last-child { margin-right: 0; }
+}
+
+div.pane_link.img_link {
+   width: 100px;
+   img {
+     margin: 0;
+     padding: 0;
+     position: absolute;
+     top: 0;
+     left: 0;
+     height: 100px;
+     width: 100px;
+     opacity: 0.4;
+   }
+   img:hover {
+     opacity: 1;
+   }
+   &.selected img { opacity: 1; }
+
+}
+
+div.pane_link.text_link {
+   //width: 200px;
+
+   div {
+     margin: 0;
+     padding: 0;
+     position: absolute;
+     top: 20px;
+     left: 0;
+     height: 60px;
+     width: 60px;
+     font-family: $title-font;
+     font-size: 60px;
+     opacity: 0.4;
+   }
+   div:hover {
+     opacity: 1;
+   }
+
+   &.selected div { opacity: 1; }
+
+   &#about_link { 
+     width: 125px; 
+     div { width: 125px; }
+   }
+
+   &#contact_link { 
+     width: 170px; 
+     div { width: 170px; }
+   }
+}
+
+
+.vcenter_parent {
+   text-align: center;
+   font-size: 0;
+}
+.vcenter_parent:before {
+   content: '';
+   display: inline-block;
+   height: 100%;
+   vertical-align: middle;
+   font-size: 0;
+}
+
+.vcenter {
+   display: inline-block;
+   vertical-align: middle;
+}
+
+.two_column_list
+{
+  display: block;
+
+  .list_title
+  {
+    font-family: $content-font-bold;
+  }
+
+  .column
+  {
+    width: $content-column-width / 2 - $two-column-list-indent;
+    display: inline-block;
+    padding-left: $two-column-list-indent;
+
+    ul
+    { 
+      font-weight: normal;
+      @include no-bullets;
+    }
+
+    &.heavy { width: $content-column-width / 2 - $two-column-list-indent + 50px };
+    &.light { width: $content-column-width / 2 - $two-column-list-indent - 50px };
+  }
+  .leftcolumn  { @extend .column; float:left; }
+  .rightcolumn { @extend .column; float:right; }
+}
+
+.contact_split
+{
+  display: block;
+
+  .column
+  {
+    width: $content-column-width / 2;
+    display: inline-block;
+
+    &.leftcolumn { float: left; }
+    &.rightcolumn { float: right; }
+
+    a { font-family: $content-font !important; }
+  }
+}
+
+
+
+
+@font-face {
+    font-family: 'bebas_neueregular';
+    src: url('../fonts/bebas-neue/BebasNeue-webfont.eot');
+    src: url('../fonts/bebas-neue/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bebas-neue/BebasNeue-webfont.woff') format('woff'),
+         url('../fonts/bebas-neue/BebasNeue-webfont.ttf') format('truetype'),
+         url('../fonts/bebas-neue/BebasNeue-webfont.svg#bebas_neueregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'sentinellight';
+    src: url('../fonts/sentinel-light/sentinel-light-webfont.eot');
+    src: url('../fonts/sentinel-light/sentinel-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sentinel-light/sentinel-light-webfont.woff') format('woff'),
+         url('../fonts/sentinel-light/sentinel-light-webfont.ttf') format('truetype'),
+         url('../fonts/sentinel-light/sentinel-light-webfont.svg#sentinellight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'sentinelsemibold';
+    src: url('../fonts/sentinel-semibold/sentinel-semibold-webfont.eot');
+    src: url('../fonts/sentinel-semibold/sentinel-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sentinel-semibold/sentinel-semibold-webfont.woff') format('woff'),
+         url('../fonts/sentinel-semibold/sentinel-semibold-webfont.ttf') format('truetype'),
+         url('../fonts/sentinel-semibold/sentinel-semibold-webfont.svg#sentinelsemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'uclaleoregular';
+    src: url('../fonts/uclaleo-regular/aleo-regular-webfont.eot');
+    src: url('../fonts/uclaleo-regular/aleo-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/uclaleo-regular/aleo-regular-webfont.woff') format('woff'),
+         url('../fonts/uclaleo-regular/aleo-regular-webfont.ttf') format('truetype'),
+         url('../fonts/uclaleo-regular/aleo-regular-webfont.svg#uclaleoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'uclaleobold';
+    src: url('../fonts/uclaleo-bold/aleo-bold-webfont.eot');
+    src: url('../fonts/uclaleo-bold/aleo-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/uclaleo-bold/aleo-bold-webfont.woff') format('woff'),
+         url('../fonts/uclaleo-bold/aleo-bold-webfont.ttf') format('truetype'),
+         url('../fonts/uclaleo-bold/aleo-bold-webfont.svg#uclaleobold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
