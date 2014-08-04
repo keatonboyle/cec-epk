@@ -156,6 +156,11 @@ div.pane_body {
         &:hover { text-decoration: underline; }
       }
 
+      &.commish_override {
+        padding-right: 40px;
+      }
+
+
     }
   }
 

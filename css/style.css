@@ -104,6 +104,9 @@ div.pane_body .top_bar .director_box a.director_email {
 div.pane_body .top_bar .director_box a.director_email:hover {
   text-decoration: underline;
 }
+div.pane_body .top_bar .director_box.commish_override {
+  padding-right: 40px;
+}
 div.pane_body .pane_content {
   font-size: 14px;
   font-family: "uclaleoregular", "Times New Roman", serif;
