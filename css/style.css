@@ -1,18 +1,15 @@
 * {
   margin: 0px;
-  padding: 0px;
-}
+  padding: 0px; }
 
 html {
   height: 100%;
-  width: 100%;
-}
+  width: 100%; }
 
 body {
   background: url("../img/epk_backgroundtile.png");
   min-height: 100%;
-  min-width: 100%;
-}
+  min-width: 100%; }
 
 body:after {
   position: fixed;
@@ -24,8 +21,7 @@ body:after {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white);
   background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), white);
   background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255, 255, 255, 0)), to(white));
-  z-index: -1;
-}
+  z-index: -1; }
 
 div.horizontal_slider {
   display: block;
@@ -36,8 +32,7 @@ div.horizontal_slider {
   left: 0px;
   font-size: 0px;
   background: #fae22d;
-  white-space: nowrap;
-}
+  white-space: nowrap; }
 
 div.horizontal_pane {
   display: inline-block;
@@ -46,8 +41,7 @@ div.horizontal_pane {
   position: relative;
   vertical-align: top;
   overflow: hidden;
-  white-space: normal;
-}
+  white-space: normal; }
 
 div.pane_body {
   display: block;
@@ -57,106 +51,90 @@ div.pane_body {
   background: none;
   height: 100%;
   font-size: 0;
-  vertical-align: top;
-}
-div.pane_body .top_bar {
-  display: block;
-  padding-top: 10px;
-  position: relative;
-  overflow: hidden;
-}
-div.pane_body .top_bar .title {
-  float: left;
-  padding-left: 290px;
-  display: inline-block;
-  font-family: "bebas_neueregular", Arial, sans-serif;
-  font-size: 100px;
-  line-height: 100px;
-  background: url("../img/cec_logo_smaller.png");
-  background-repeat: no-repeat;
-  background-origin: padding-box;
-  background-position: 200px 14px;
-}
-div.pane_body .top_bar .director_box {
-  float: right;
-  padding-right: 200px;
-  display: inline-block;
-  text-align: right;
-}
-div.pane_body .top_bar .director_box div {
-  font-size: 14px;
-  display: block;
-}
-div.pane_body .top_bar .director_box div.director_title {
-  font-family: "uclaleobold", "Times New Roman", serif;
-  margin-top: 14px;
-}
-div.pane_body .top_bar .director_box div.director_name {
-  font-family: "uclaleoregular", "Times New Roman", serif;
-}
-div.pane_body .top_bar .director_box a.director_email {
-  font-size: 14px;
-  display: block;
-  font-family: "uclaleoregular", "Times New Roman", serif;
-  text-decoration: none;
-  color: black;
-}
-div.pane_body .top_bar .director_box a.director_email:hover {
-  text-decoration: underline;
-}
-div.pane_body .top_bar .director_box.commish_override {
-  padding-right: 40px;
-}
-div.pane_body .pane_content {
-  font-size: 14px;
-  font-family: "uclaleoregular", "Times New Roman", serif;
-  display: block;
-  padding-top: 10px;
-}
-div.pane_body .pane_content .left {
-  float: left;
-  padding-left: 290px;
-  text-align: justify;
-  width: 415px;
-}
-div.pane_body .pane_content .right {
-  float: right;
-  text-align: justify;
-  width: 415px;
-  padding-right: 200px;
-}
-div.pane_body .pane_content span.bold {
-  font-family: "uclaleobold", "Times New Roman", serif;
-}
-div.pane_body .pane_content a {
-  font-family: "uclaleobold", "Times New Roman", serif;
-  text-decoration: none;
-  color: black;
-}
-div.pane_body .pane_content a:hover {
-  text-decoration: underline;
-}
-div.pane_body .pane_content .smallgap {
-  display: block;
-  height: 5px;
-}
-div.pane_body .home_graphic {
-  font-family: "bebas_neueregular", Arial, sans-serif;
-  font-size: 100px;
-  line-height: 90px;
-  min-height: 210px;
-  background: url("../img/cec_logo.png");
-  background-size: 200px 200px;
-  background-repeat: no-repeat;
-  background-origin: padding-box;
-  background-position: 0px 20px;
-  padding-left: 220px;
-  padding-top: 30px;
-  padding-bottom: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
-}
+  vertical-align: top; }
+  div.pane_body .top_bar {
+    display: block;
+    padding-top: 10px;
+    position: relative;
+    overflow: hidden; }
+    div.pane_body .top_bar .title {
+      float: left;
+      padding-left: 290px;
+      display: inline-block;
+      font-family: "bebas_neueregular", Arial, sans-serif;
+      font-size: 100px;
+      line-height: 100px;
+      background: url("../img/cec_logo_smaller.png");
+      background-repeat: no-repeat;
+      background-origin: padding-box;
+      background-position: 200px 14px; }
+    div.pane_body .top_bar .director_box {
+      float: right;
+      padding-right: 200px;
+      display: inline-block;
+      text-align: right; }
+      div.pane_body .top_bar .director_box div {
+        font-size: 14px;
+        display: block; }
+        div.pane_body .top_bar .director_box div.director_title {
+          font-family: "uclaleobold", "Times New Roman", serif;
+          margin-top: 14px; }
+        div.pane_body .top_bar .director_box div.director_name {
+          font-family: "uclaleoregular", "Times New Roman", serif; }
+      div.pane_body .top_bar .director_box a.director_email {
+        font-size: 14px;
+        display: block;
+        font-family: "uclaleoregular", "Times New Roman", serif;
+        text-decoration: none;
+        color: black; }
+        div.pane_body .top_bar .director_box a.director_email:hover {
+          text-decoration: underline; }
+      div.pane_body .top_bar .director_box.commish_override {
+        padding-right: 40px; }
+      div.pane_body .top_bar .director_box.asscomm_override {
+        padding-right: 40px; }
+  div.pane_body .pane_content {
+    font-size: 14px;
+    font-family: "uclaleoregular", "Times New Roman", serif;
+    display: block;
+    padding-top: 10px; }
+    div.pane_body .pane_content .left {
+      float: left;
+      padding-left: 290px;
+      text-align: justify;
+      width: 415px; }
+    div.pane_body .pane_content .right {
+      float: right;
+      text-align: justify;
+      width: 415px;
+      padding-right: 200px; }
+    div.pane_body .pane_content span.bold {
+      font-family: "uclaleobold", "Times New Roman", serif; }
+    div.pane_body .pane_content a {
+      font-family: "uclaleobold", "Times New Roman", serif;
+      text-decoration: none;
+      color: black; }
+      div.pane_body .pane_content a:hover {
+        text-decoration: underline; }
+    div.pane_body .pane_content .smallgap {
+      display: block;
+      height: 5px; }
+  div.pane_body .home_graphic {
+    font-family: "bebas_neueregular", Arial, sans-serif;
+    font-size: 100px;
+    line-height: 90px;
+    min-height: 210px;
+    background: url("../img/cec_logo.png");
+    background-size: 200px 200px;
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+    background-position: 0px 20px;
+    padding-left: 220px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left; }
 
 div#master_wrapper {
   position: absolute;
@@ -167,8 +145,7 @@ div#master_wrapper {
   font-size: 0;
   min-width: 1360px;
   white-space: nowrap;
-  overflow-x: hidden;
-}
+  overflow-x: hidden; }
 
 div#content_wrapper {
   height: 540px;
@@ -176,45 +153,38 @@ div#content_wrapper {
   min-width: 1360px;
   position: relative;
   font-size: 12px;
-  white-space: nowrap;
-}
+  white-space: nowrap; }
 
 div#slider_wrapper {
   height: 360px;
   background: white;
-  white-space: normal;
-}
-div#slider_wrapper div.arrow {
-  z-index: 4;
-  content: '';
-  width: 0px;
-  height: 0px;
-  background: none;
-  position: absolute;
-  cursor: pointer;
-  top: 150px;
-  border-top: solid transparent 30px;
-  border-bottom: solid transparent 30px;
-  border-left: solid black 20px;
-  border-right: solid black 20px;
-}
-div#slider_wrapper div.arrow.disabled {
-  display: none;
-}
-div#slider_wrapper div.arrow.right_arrow {
-  border-right: none;
-  right: 20px;
-}
-div#slider_wrapper div.arrow.left_arrow {
-  border-left: none;
-  left: 20px;
-}
+  white-space: normal; }
+  div#slider_wrapper div.arrow {
+    z-index: 4;
+    content: '';
+    width: 0px;
+    height: 0px;
+    background: none;
+    position: absolute;
+    cursor: pointer;
+    top: 150px;
+    border-top: solid transparent 30px;
+    border-bottom: solid transparent 30px;
+    border-left: solid black 20px;
+    border-right: solid black 20px; }
+    div#slider_wrapper div.arrow.disabled {
+      display: none; }
+    div#slider_wrapper div.arrow.right_arrow {
+      border-right: none;
+      right: 20px; }
+    div#slider_wrapper div.arrow.left_arrow {
+      border-left: none;
+      left: 20px; }
 
 div.horizontal_slider_placeholder {
   width: 100%;
   position: relative;
-  overflow-x: hidden;
-}
+  overflow-x: hidden; }
 
 #slider_wrapper:before {
   content: '';
@@ -224,8 +194,7 @@ div.horizontal_slider_placeholder {
   right: 0px;
   height: 2px;
   border-top: 1px solid #fae22d;
-  border-bottom: 2px solid #fae22d;
-}
+  border-bottom: 2px solid #fae22d; }
 
 #slider_wrapper:after {
   content: '';
@@ -235,14 +204,12 @@ div.horizontal_slider_placeholder {
   right: 0px;
   height: 2px;
   border-top: 2px solid #fae22d;
-  border-bottom: 1px solid #fae22d;
-}
+  border-bottom: 1px solid #fae22d; }
 
 div#bottom_bar {
   height: 100px;
   margin-top: 60px;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 div.pane_link {
   height: 100px;
@@ -251,34 +218,27 @@ div.pane_link {
   margin-left: 9px;
   margin-right: 9px;
   font-size: 0;
-  cursor: pointer;
-}
-div.pane_link:first-child {
-  margin-left: 0;
-}
-div.pane_link:last-child {
-  margin-right: 0;
-}
+  cursor: pointer; }
+  div.pane_link:first-child {
+    margin-left: 0; }
+  div.pane_link:last-child {
+    margin-right: 0; }
 
 div.pane_link.img_link {
-  width: 100px;
-}
-div.pane_link.img_link img {
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100px;
-  width: 100px;
-  opacity: 0.4;
-}
-div.pane_link.img_link img:hover {
-  opacity: 1;
-}
-div.pane_link.img_link.selected img {
-  opacity: 1;
-}
+  width: 100px; }
+  div.pane_link.img_link img {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100px;
+    opacity: 0.4; }
+  div.pane_link.img_link img:hover {
+    opacity: 1; }
+  div.pane_link.img_link.selected img {
+    opacity: 1; }
 
 div.pane_link.text_link div {
   margin: 0;
@@ -290,123 +250,100 @@ div.pane_link.text_link div {
   width: 60px;
   font-family: "bebas_neueregular", Arial, sans-serif;
   font-size: 60px;
-  opacity: 0.4;
-}
+  opacity: 0.4; }
 div.pane_link.text_link div:hover {
-  opacity: 1;
-}
+  opacity: 1; }
 div.pane_link.text_link.selected div {
-  opacity: 1;
-}
+  opacity: 1; }
 div.pane_link.text_link#about_link {
-  width: 125px;
-}
-div.pane_link.text_link#about_link div {
-  width: 125px;
-}
+  width: 125px; }
+  div.pane_link.text_link#about_link div {
+    width: 125px; }
 div.pane_link.text_link#contact_link {
-  width: 170px;
-}
-div.pane_link.text_link#contact_link div {
-  width: 170px;
-}
+  width: 170px; }
+  div.pane_link.text_link#contact_link div {
+    width: 170px; }
 
 .vcenter_parent {
   text-align: center;
-  font-size: 0;
-}
+  font-size: 0; }
 
 .vcenter_parent:before {
   content: '';
   display: inline-block;
   height: 100%;
   vertical-align: middle;
-  font-size: 0;
-}
+  font-size: 0; }
 
 .vcenter {
   display: inline-block;
-  vertical-align: middle;
-}
+  vertical-align: middle; }
 
 .two_column_list {
-  display: block;
-}
-.two_column_list .list_title {
-  font-family: "uclaleobold", "Times New Roman", serif;
-}
-.two_column_list .column, .two_column_list .leftcolumn, .two_column_list .rightcolumn {
-  width: 192.5px;
-  display: inline-block;
-  padding-left: 15px;
-}
-.two_column_list .column ul, .two_column_list .leftcolumn ul, .two_column_list .rightcolumn ul {
-  font-weight: normal;
-  list-style: none;
-  list-style-type: none !important;
-}
-.two_column_list .column.heavy, .two_column_list .heavy.leftcolumn, .two_column_list .heavy.rightcolumn {
-  width: 242.5px;
-}
-.two_column_list .column.light, .two_column_list .light.leftcolumn, .two_column_list .light.rightcolumn {
-  width: 142.5px;
-}
-.two_column_list .leftcolumn {
-  float: left;
-}
-.two_column_list .rightcolumn {
-  float: right;
-}
+  display: block; }
+  .two_column_list .list_title {
+    font-family: "uclaleobold", "Times New Roman", serif; }
+  .two_column_list .column, .two_column_list .leftcolumn, .two_column_list .rightcolumn {
+    width: 192.5px;
+    display: inline-block;
+    padding-left: 15px; }
+    .two_column_list .column ul, .two_column_list .leftcolumn ul, .two_column_list .rightcolumn ul {
+      font-weight: normal;
+      list-style: none;
+      list-style-type: none !important; }
+    .two_column_list .column.heavy, .two_column_list .heavy.leftcolumn, .two_column_list .heavy.rightcolumn {
+      width: 242.5px; }
+    .two_column_list .column.light, .two_column_list .light.leftcolumn, .two_column_list .light.rightcolumn {
+      width: 142.5px; }
+  .two_column_list .leftcolumn {
+    float: left; }
+  .two_column_list .rightcolumn {
+    float: right; }
 
 .contact_split {
-  display: block;
-}
-.contact_split .column, .contact_split .two_column_list .leftcolumn, .two_column_list .contact_split .leftcolumn, .contact_split .two_column_list .rightcolumn, .two_column_list .contact_split .rightcolumn {
-  width: 207.5px;
-  display: inline-block;
-}
-.contact_split .column.leftcolumn, .contact_split .two_column_list .leftcolumn, .two_column_list .contact_split .leftcolumn {
-  float: left;
-}
-.contact_split .column.rightcolumn, .contact_split .two_column_list .rightcolumn, .two_column_list .contact_split .rightcolumn {
-  float: right;
-}
-.contact_split .column a, .contact_split .two_column_list .leftcolumn a, .two_column_list .contact_split .leftcolumn a, .contact_split .two_column_list .rightcolumn a, .two_column_list .contact_split .rightcolumn a {
-  font-family: "uclaleoregular", "Times New Roman", serif !important;
-}
+  display: block; }
+  .contact_split .column, .contact_split .two_column_list .leftcolumn, .two_column_list .contact_split .leftcolumn, .contact_split .two_column_list .rightcolumn, .two_column_list .contact_split .rightcolumn {
+    width: 207.5px;
+    display: inline-block; }
+    .contact_split .column.leftcolumn, .contact_split .two_column_list .leftcolumn, .two_column_list .contact_split .leftcolumn {
+      float: left; }
+    .contact_split .column.rightcolumn, .contact_split .two_column_list .rightcolumn, .two_column_list .contact_split .rightcolumn {
+      float: right; }
+    .contact_split .column a, .contact_split .two_column_list .leftcolumn a, .two_column_list .contact_split .leftcolumn a, .contact_split .two_column_list .rightcolumn a, .two_column_list .contact_split .rightcolumn a {
+      font-family: "uclaleoregular", "Times New Roman", serif !important; }
+
+a.unbold {
+  font-family: "uclaleoregular", "Times New Roman", serif !important; }
 
 @font-face {
   font-family: 'bebas_neueregular';
   src: url("../fonts/bebas-neue/BebasNeue-webfont.eot");
   src: url("../fonts/bebas-neue/BebasNeue-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/bebas-neue/BebasNeue-webfont.woff") format("woff"), url("../fonts/bebas-neue/BebasNeue-webfont.ttf") format("truetype"), url("../fonts/bebas-neue/BebasNeue-webfont.svg#bebas_neueregular") format("svg");
   font-weight: normal;
-  font-style: normal;
-}
+  font-style: normal; }
 @font-face {
   font-family: 'sentinellight';
   src: url("../fonts/sentinel-light/sentinel-light-webfont.eot");
   src: url("../fonts/sentinel-light/sentinel-light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sentinel-light/sentinel-light-webfont.woff") format("woff"), url("../fonts/sentinel-light/sentinel-light-webfont.ttf") format("truetype"), url("../fonts/sentinel-light/sentinel-light-webfont.svg#sentinellight") format("svg");
   font-weight: normal;
-  font-style: normal;
-}
+  font-style: normal; }
 @font-face {
   font-family: 'sentinelsemibold';
   src: url("../fonts/sentinel-semibold/sentinel-semibold-webfont.eot");
   src: url("../fonts/sentinel-semibold/sentinel-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/sentinel-semibold/sentinel-semibold-webfont.woff") format("woff"), url("../fonts/sentinel-semibold/sentinel-semibold-webfont.ttf") format("truetype"), url("../fonts/sentinel-semibold/sentinel-semibold-webfont.svg#sentinelsemibold") format("svg");
   font-weight: normal;
-  font-style: normal;
-}
+  font-style: normal; }
 @font-face {
   font-family: 'uclaleoregular';
   src: url("../fonts/uclaleo-regular/aleo-regular-webfont.eot");
   src: url("../fonts/uclaleo-regular/aleo-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/uclaleo-regular/aleo-regular-webfont.woff") format("woff"), url("../fonts/uclaleo-regular/aleo-regular-webfont.ttf") format("truetype"), url("../fonts/uclaleo-regular/aleo-regular-webfont.svg#uclaleoregular") format("svg");
   font-weight: normal;
-  font-style: normal;
-}
+  font-style: normal; }
 @font-face {
   font-family: 'uclaleobold';
   src: url("../fonts/uclaleo-bold/aleo-bold-webfont.eot");
   src: url("../fonts/uclaleo-bold/aleo-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/uclaleo-bold/aleo-bold-webfont.woff") format("woff"), url("../fonts/uclaleo-bold/aleo-bold-webfont.ttf") format("truetype"), url("../fonts/uclaleo-bold/aleo-bold-webfont.svg#uclaleobold") format("svg");
   font-weight: normal;
-  font-style: normal;
-}
+  font-style: normal; }
+
+/*# sourceMappingURL=style.css.map */

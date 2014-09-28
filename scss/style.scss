@@ -160,6 +160,10 @@ div.pane_body {
         padding-right: 40px;
       }
 
+      &.asscomm_override {
+        padding-right: 40px;
+      }
+
 
     }
   }
@@ -445,6 +449,8 @@ div.pane_link.text_link {
     a { font-family: $content-font !important; }
   }
 }
+
+a.unbold { font-family: $content-font !important; }
 
 
 

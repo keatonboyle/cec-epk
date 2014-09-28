@@ -1,0 +1,520 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<style type="text/css">
+.ef0,.f0 { color: #000000; } .eb0,.b0 { background-color: #000000; }
+.ef1,.f1 { color: #AA0000; } .eb1,.b1 { background-color: #AA0000; }
+.ef2,.f2 { color: #00AA00; } .eb2,.b2 { background-color: #00AA00; }
+.ef3,.f3 { color: #AA5500; } .eb3,.b3 { background-color: #AA5500; }
+.ef4,.f4 { color: #0000AA; } .eb4,.b4 { background-color: #0000AA; }
+.ef5,.f5 { color: #AA00AA; } .eb5,.b5 { background-color: #AA00AA; }
+.ef6,.f6 { color: #00AAAA; } .eb6,.b6 { background-color: #00AAAA; }
+.ef7,.f7 { color: #AAAAAA; } .eb7,.b7 { background-color: #AAAAAA; }
+.ef8, .f0 > .bold,.bold > .f0 { color: #555555; font-weight: normal; }
+.ef9, .f1 > .bold,.bold > .f1 { color: #FF5555; font-weight: normal; }
+.ef10,.f2 > .bold,.bold > .f2 { color: #55FF55; font-weight: normal; }
+.ef11,.f3 > .bold,.bold > .f3 { color: #FFFF55; font-weight: normal; }
+.ef12,.f4 > .bold,.bold > .f4 { color: #5555FF; font-weight: normal; }
+.ef13,.f5 > .bold,.bold > .f5 { color: #FF55FF; font-weight: normal; }
+.ef14,.f6 > .bold,.bold > .f6 { color: #55FFFF; font-weight: normal; }
+.ef15,.f7 > .bold,.bold > .f7 { color: #FFFFFF; font-weight: normal; }
+.eb8  { background-color: #555555; }
+.eb9  { background-color: #FF5555; }
+.eb10 { background-color: #55FF55; }
+.eb11 { background-color: #FFFF55; }
+.eb12 { background-color: #5555FF; }
+.eb13 { background-color: #FF55FF; }
+.eb14 { background-color: #55FFFF; }
+.eb15 { background-color: #FFFFFF; }
+.ef16 { color: #000000; } .eb16 { background-color: #000000; }
+.ef17 { color: #00005f; } .eb17 { background-color: #00005f; }
+.ef18 { color: #000087; } .eb18 { background-color: #000087; }
+.ef19 { color: #0000af; } .eb19 { background-color: #0000af; }
+.ef20 { color: #0000d7; } .eb20 { background-color: #0000d7; }
+.ef21 { color: #0000ff; } .eb21 { background-color: #0000ff; }
+.ef22 { color: #005f00; } .eb22 { background-color: #005f00; }
+.ef23 { color: #005f5f; } .eb23 { background-color: #005f5f; }
+.ef24 { color: #005f87; } .eb24 { background-color: #005f87; }
+.ef25 { color: #005faf; } .eb25 { background-color: #005faf; }
+.ef26 { color: #005fd7; } .eb26 { background-color: #005fd7; }
+.ef27 { color: #005fff; } .eb27 { background-color: #005fff; }
+.ef28 { color: #008700; } .eb28 { background-color: #008700; }
+.ef29 { color: #00875f; } .eb29 { background-color: #00875f; }
+.ef30 { color: #008787; } .eb30 { background-color: #008787; }
+.ef31 { color: #0087af; } .eb31 { background-color: #0087af; }
+.ef32 { color: #0087d7; } .eb32 { background-color: #0087d7; }
+.ef33 { color: #0087ff; } .eb33 { background-color: #0087ff; }
+.ef34 { color: #00af00; } .eb34 { background-color: #00af00; }
+.ef35 { color: #00af5f; } .eb35 { background-color: #00af5f; }
+.ef36 { color: #00af87; } .eb36 { background-color: #00af87; }
+.ef37 { color: #00afaf; } .eb37 { background-color: #00afaf; }
+.ef38 { color: #00afd7; } .eb38 { background-color: #00afd7; }
+.ef39 { color: #00afff; } .eb39 { background-color: #00afff; }
+.ef40 { color: #00d700; } .eb40 { background-color: #00d700; }
+.ef41 { color: #00d75f; } .eb41 { background-color: #00d75f; }
+.ef42 { color: #00d787; } .eb42 { background-color: #00d787; }
+.ef43 { color: #00d7af; } .eb43 { background-color: #00d7af; }
+.ef44 { color: #00d7d7; } .eb44 { background-color: #00d7d7; }
+.ef45 { color: #00d7ff; } .eb45 { background-color: #00d7ff; }
+.ef46 { color: #00ff00; } .eb46 { background-color: #00ff00; }
+.ef47 { color: #00ff5f; } .eb47 { background-color: #00ff5f; }
+.ef48 { color: #00ff87; } .eb48 { background-color: #00ff87; }
+.ef49 { color: #00ffaf; } .eb49 { background-color: #00ffaf; }
+.ef50 { color: #00ffd7; } .eb50 { background-color: #00ffd7; }
+.ef51 { color: #00ffff; } .eb51 { background-color: #00ffff; }
+.ef52 { color: #5f0000; } .eb52 { background-color: #5f0000; }
+.ef53 { color: #5f005f; } .eb53 { background-color: #5f005f; }
+.ef54 { color: #5f0087; } .eb54 { background-color: #5f0087; }
+.ef55 { color: #5f00af; } .eb55 { background-color: #5f00af; }
+.ef56 { color: #5f00d7; } .eb56 { background-color: #5f00d7; }
+.ef57 { color: #5f00ff; } .eb57 { background-color: #5f00ff; }
+.ef58 { color: #5f5f00; } .eb58 { background-color: #5f5f00; }
+.ef59 { color: #5f5f5f; } .eb59 { background-color: #5f5f5f; }
+.ef60 { color: #5f5f87; } .eb60 { background-color: #5f5f87; }
+.ef61 { color: #5f5faf; } .eb61 { background-color: #5f5faf; }
+.ef62 { color: #5f5fd7; } .eb62 { background-color: #5f5fd7; }
+.ef63 { color: #5f5fff; } .eb63 { background-color: #5f5fff; }
+.ef64 { color: #5f8700; } .eb64 { background-color: #5f8700; }
+.ef65 { color: #5f875f; } .eb65 { background-color: #5f875f; }
+.ef66 { color: #5f8787; } .eb66 { background-color: #5f8787; }
+.ef67 { color: #5f87af; } .eb67 { background-color: #5f87af; }
+.ef68 { color: #5f87d7; } .eb68 { background-color: #5f87d7; }
+.ef69 { color: #5f87ff; } .eb69 { background-color: #5f87ff; }
+.ef70 { color: #5faf00; } .eb70 { background-color: #5faf00; }
+.ef71 { color: #5faf5f; } .eb71 { background-color: #5faf5f; }
+.ef72 { color: #5faf87; } .eb72 { background-color: #5faf87; }
+.ef73 { color: #5fafaf; } .eb73 { background-color: #5fafaf; }
+.ef74 { color: #5fafd7; } .eb74 { background-color: #5fafd7; }
+.ef75 { color: #5fafff; } .eb75 { background-color: #5fafff; }
+.ef76 { color: #5fd700; } .eb76 { background-color: #5fd700; }
+.ef77 { color: #5fd75f; } .eb77 { background-color: #5fd75f; }
+.ef78 { color: #5fd787; } .eb78 { background-color: #5fd787; }
+.ef79 { color: #5fd7af; } .eb79 { background-color: #5fd7af; }
+.ef80 { color: #5fd7d7; } .eb80 { background-color: #5fd7d7; }
+.ef81 { color: #5fd7ff; } .eb81 { background-color: #5fd7ff; }
+.ef82 { color: #5fff00; } .eb82 { background-color: #5fff00; }
+.ef83 { color: #5fff5f; } .eb83 { background-color: #5fff5f; }
+.ef84 { color: #5fff87; } .eb84 { background-color: #5fff87; }
+.ef85 { color: #5fffaf; } .eb85 { background-color: #5fffaf; }
+.ef86 { color: #5fffd7; } .eb86 { background-color: #5fffd7; }
+.ef87 { color: #5fffff; } .eb87 { background-color: #5fffff; }
+.ef88 { color: #870000; } .eb88 { background-color: #870000; }
+.ef89 { color: #87005f; } .eb89 { background-color: #87005f; }
+.ef90 { color: #870087; } .eb90 { background-color: #870087; }
+.ef91 { color: #8700af; } .eb91 { background-color: #8700af; }
+.ef92 { color: #8700d7; } .eb92 { background-color: #8700d7; }
+.ef93 { color: #8700ff; } .eb93 { background-color: #8700ff; }
+.ef94 { color: #875f00; } .eb94 { background-color: #875f00; }
+.ef95 { color: #875f5f; } .eb95 { background-color: #875f5f; }
+.ef96 { color: #875f87; } .eb96 { background-color: #875f87; }
+.ef97 { color: #875faf; } .eb97 { background-color: #875faf; }
+.ef98 { color: #875fd7; } .eb98 { background-color: #875fd7; }
+.ef99 { color: #875fff; } .eb99 { background-color: #875fff; }
+.ef100 { color: #878700; } .eb100 { background-color: #878700; }
+.ef101 { color: #87875f; } .eb101 { background-color: #87875f; }
+.ef102 { color: #878787; } .eb102 { background-color: #878787; }
+.ef103 { color: #8787af; } .eb103 { background-color: #8787af; }
+.ef104 { color: #8787d7; } .eb104 { background-color: #8787d7; }
+.ef105 { color: #8787ff; } .eb105 { background-color: #8787ff; }
+.ef106 { color: #87af00; } .eb106 { background-color: #87af00; }
+.ef107 { color: #87af5f; } .eb107 { background-color: #87af5f; }
+.ef108 { color: #87af87; } .eb108 { background-color: #87af87; }
+.ef109 { color: #87afaf; } .eb109 { background-color: #87afaf; }
+.ef110 { color: #87afd7; } .eb110 { background-color: #87afd7; }
+.ef111 { color: #87afff; } .eb111 { background-color: #87afff; }
+.ef112 { color: #87d700; } .eb112 { background-color: #87d700; }
+.ef113 { color: #87d75f; } .eb113 { background-color: #87d75f; }
+.ef114 { color: #87d787; } .eb114 { background-color: #87d787; }
+.ef115 { color: #87d7af; } .eb115 { background-color: #87d7af; }
+.ef116 { color: #87d7d7; } .eb116 { background-color: #87d7d7; }
+.ef117 { color: #87d7ff; } .eb117 { background-color: #87d7ff; }
+.ef118 { color: #87ff00; } .eb118 { background-color: #87ff00; }
+.ef119 { color: #87ff5f; } .eb119 { background-color: #87ff5f; }
+.ef120 { color: #87ff87; } .eb120 { background-color: #87ff87; }
+.ef121 { color: #87ffaf; } .eb121 { background-color: #87ffaf; }
+.ef122 { color: #87ffd7; } .eb122 { background-color: #87ffd7; }
+.ef123 { color: #87ffff; } .eb123 { background-color: #87ffff; }
+.ef124 { color: #af0000; } .eb124 { background-color: #af0000; }
+.ef125 { color: #af005f; } .eb125 { background-color: #af005f; }
+.ef126 { color: #af0087; } .eb126 { background-color: #af0087; }
+.ef127 { color: #af00af; } .eb127 { background-color: #af00af; }
+.ef128 { color: #af00d7; } .eb128 { background-color: #af00d7; }
+.ef129 { color: #af00ff; } .eb129 { background-color: #af00ff; }
+.ef130 { color: #af5f00; } .eb130 { background-color: #af5f00; }
+.ef131 { color: #af5f5f; } .eb131 { background-color: #af5f5f; }
+.ef132 { color: #af5f87; } .eb132 { background-color: #af5f87; }
+.ef133 { color: #af5faf; } .eb133 { background-color: #af5faf; }
+.ef134 { color: #af5fd7; } .eb134 { background-color: #af5fd7; }
+.ef135 { color: #af5fff; } .eb135 { background-color: #af5fff; }
+.ef136 { color: #af8700; } .eb136 { background-color: #af8700; }
+.ef137 { color: #af875f; } .eb137 { background-color: #af875f; }
+.ef138 { color: #af8787; } .eb138 { background-color: #af8787; }
+.ef139 { color: #af87af; } .eb139 { background-color: #af87af; }
+.ef140 { color: #af87d7; } .eb140 { background-color: #af87d7; }
+.ef141 { color: #af87ff; } .eb141 { background-color: #af87ff; }
+.ef142 { color: #afaf00; } .eb142 { background-color: #afaf00; }
+.ef143 { color: #afaf5f; } .eb143 { background-color: #afaf5f; }
+.ef144 { color: #afaf87; } .eb144 { background-color: #afaf87; }
+.ef145 { color: #afafaf; } .eb145 { background-color: #afafaf; }
+.ef146 { color: #afafd7; } .eb146 { background-color: #afafd7; }
+.ef147 { color: #afafff; } .eb147 { background-color: #afafff; }
+.ef148 { color: #afd700; } .eb148 { background-color: #afd700; }
+.ef149 { color: #afd75f; } .eb149 { background-color: #afd75f; }
+.ef150 { color: #afd787; } .eb150 { background-color: #afd787; }
+.ef151 { color: #afd7af; } .eb151 { background-color: #afd7af; }
+.ef152 { color: #afd7d7; } .eb152 { background-color: #afd7d7; }
+.ef153 { color: #afd7ff; } .eb153 { background-color: #afd7ff; }
+.ef154 { color: #afff00; } .eb154 { background-color: #afff00; }
+.ef155 { color: #afff5f; } .eb155 { background-color: #afff5f; }
+.ef156 { color: #afff87; } .eb156 { background-color: #afff87; }
+.ef157 { color: #afffaf; } .eb157 { background-color: #afffaf; }
+.ef158 { color: #afffd7; } .eb158 { background-color: #afffd7; }
+.ef159 { color: #afffff; } .eb159 { background-color: #afffff; }
+.ef160 { color: #d70000; } .eb160 { background-color: #d70000; }
+.ef161 { color: #d7005f; } .eb161 { background-color: #d7005f; }
+.ef162 { color: #d70087; } .eb162 { background-color: #d70087; }
+.ef163 { color: #d700af; } .eb163 { background-color: #d700af; }
+.ef164 { color: #d700d7; } .eb164 { background-color: #d700d7; }
+.ef165 { color: #d700ff; } .eb165 { background-color: #d700ff; }
+.ef166 { color: #d75f00; } .eb166 { background-color: #d75f00; }
+.ef167 { color: #d75f5f; } .eb167 { background-color: #d75f5f; }
+.ef168 { color: #d75f87; } .eb168 { background-color: #d75f87; }
+.ef169 { color: #d75faf; } .eb169 { background-color: #d75faf; }
+.ef170 { color: #d75fd7; } .eb170 { background-color: #d75fd7; }
+.ef171 { color: #d75fff; } .eb171 { background-color: #d75fff; }
+.ef172 { color: #d78700; } .eb172 { background-color: #d78700; }
+.ef173 { color: #d7875f; } .eb173 { background-color: #d7875f; }
+.ef174 { color: #d78787; } .eb174 { background-color: #d78787; }
+.ef175 { color: #d787af; } .eb175 { background-color: #d787af; }
+.ef176 { color: #d787d7; } .eb176 { background-color: #d787d7; }
+.ef177 { color: #d787ff; } .eb177 { background-color: #d787ff; }
+.ef178 { color: #d7af00; } .eb178 { background-color: #d7af00; }
+.ef179 { color: #d7af5f; } .eb179 { background-color: #d7af5f; }
+.ef180 { color: #d7af87; } .eb180 { background-color: #d7af87; }
+.ef181 { color: #d7afaf; } .eb181 { background-color: #d7afaf; }
+.ef182 { color: #d7afd7; } .eb182 { background-color: #d7afd7; }
+.ef183 { color: #d7afff; } .eb183 { background-color: #d7afff; }
+.ef184 { color: #d7d700; } .eb184 { background-color: #d7d700; }
+.ef185 { color: #d7d75f; } .eb185 { background-color: #d7d75f; }
+.ef186 { color: #d7d787; } .eb186 { background-color: #d7d787; }
+.ef187 { color: #d7d7af; } .eb187 { background-color: #d7d7af; }
+.ef188 { color: #d7d7d7; } .eb188 { background-color: #d7d7d7; }
+.ef189 { color: #d7d7ff; } .eb189 { background-color: #d7d7ff; }
+.ef190 { color: #d7ff00; } .eb190 { background-color: #d7ff00; }
+.ef191 { color: #d7ff5f; } .eb191 { background-color: #d7ff5f; }
+.ef192 { color: #d7ff87; } .eb192 { background-color: #d7ff87; }
+.ef193 { color: #d7ffaf; } .eb193 { background-color: #d7ffaf; }
+.ef194 { color: #d7ffd7; } .eb194 { background-color: #d7ffd7; }
+.ef195 { color: #d7ffff; } .eb195 { background-color: #d7ffff; }
+.ef196 { color: #ff0000; } .eb196 { background-color: #ff0000; }
+.ef197 { color: #ff005f; } .eb197 { background-color: #ff005f; }
+.ef198 { color: #ff0087; } .eb198 { background-color: #ff0087; }
+.ef199 { color: #ff00af; } .eb199 { background-color: #ff00af; }
+.ef200 { color: #ff00d7; } .eb200 { background-color: #ff00d7; }
+.ef201 { color: #ff00ff; } .eb201 { background-color: #ff00ff; }
+.ef202 { color: #ff5f00; } .eb202 { background-color: #ff5f00; }
+.ef203 { color: #ff5f5f; } .eb203 { background-color: #ff5f5f; }
+.ef204 { color: #ff5f87; } .eb204 { background-color: #ff5f87; }
+.ef205 { color: #ff5faf; } .eb205 { background-color: #ff5faf; }
+.ef206 { color: #ff5fd7; } .eb206 { background-color: #ff5fd7; }
+.ef207 { color: #ff5fff; } .eb207 { background-color: #ff5fff; }
+.ef208 { color: #ff8700; } .eb208 { background-color: #ff8700; }
+.ef209 { color: #ff875f; } .eb209 { background-color: #ff875f; }
+.ef210 { color: #ff8787; } .eb210 { background-color: #ff8787; }
+.ef211 { color: #ff87af; } .eb211 { background-color: #ff87af; }
+.ef212 { color: #ff87d7; } .eb212 { background-color: #ff87d7; }
+.ef213 { color: #ff87ff; } .eb213 { background-color: #ff87ff; }
+.ef214 { color: #ffaf00; } .eb214 { background-color: #ffaf00; }
+.ef215 { color: #ffaf5f; } .eb215 { background-color: #ffaf5f; }
+.ef216 { color: #ffaf87; } .eb216 { background-color: #ffaf87; }
+.ef217 { color: #ffafaf; } .eb217 { background-color: #ffafaf; }
+.ef218 { color: #ffafd7; } .eb218 { background-color: #ffafd7; }
+.ef219 { color: #ffafff; } .eb219 { background-color: #ffafff; }
+.ef220 { color: #ffd700; } .eb220 { background-color: #ffd700; }
+.ef221 { color: #ffd75f; } .eb221 { background-color: #ffd75f; }
+.ef222 { color: #ffd787; } .eb222 { background-color: #ffd787; }
+.ef223 { color: #ffd7af; } .eb223 { background-color: #ffd7af; }
+.ef224 { color: #ffd7d7; } .eb224 { background-color: #ffd7d7; }
+.ef225 { color: #ffd7ff; } .eb225 { background-color: #ffd7ff; }
+.ef226 { color: #ffff00; } .eb226 { background-color: #ffff00; }
+.ef227 { color: #ffff5f; } .eb227 { background-color: #ffff5f; }
+.ef228 { color: #ffff87; } .eb228 { background-color: #ffff87; }
+.ef229 { color: #ffffaf; } .eb229 { background-color: #ffffaf; }
+.ef230 { color: #ffffd7; } .eb230 { background-color: #ffffd7; }
+.ef231 { color: #ffffff; } .eb231 { background-color: #ffffff; }
+.ef232 { color: #080808; } .eb232 { background-color: #080808; }
+.ef233 { color: #121212; } .eb233 { background-color: #121212; }
+.ef234 { color: #1c1c1c; } .eb234 { background-color: #1c1c1c; }
+.ef235 { color: #262626; } .eb235 { background-color: #262626; }
+.ef236 { color: #303030; } .eb236 { background-color: #303030; }
+.ef237 { color: #3a3a3a; } .eb237 { background-color: #3a3a3a; }
+.ef238 { color: #444444; } .eb238 { background-color: #444444; }
+.ef239 { color: #4e4e4e; } .eb239 { background-color: #4e4e4e; }
+.ef240 { color: #585858; } .eb240 { background-color: #585858; }
+.ef241 { color: #626262; } .eb241 { background-color: #626262; }
+.ef242 { color: #6c6c6c; } .eb242 { background-color: #6c6c6c; }
+.ef243 { color: #767676; } .eb243 { background-color: #767676; }
+.ef244 { color: #808080; } .eb244 { background-color: #808080; }
+.ef245 { color: #8a8a8a; } .eb245 { background-color: #8a8a8a; }
+.ef246 { color: #949494; } .eb246 { background-color: #949494; }
+.ef247 { color: #9e9e9e; } .eb247 { background-color: #9e9e9e; }
+.ef248 { color: #a8a8a8; } .eb248 { background-color: #a8a8a8; }
+.ef249 { color: #b2b2b2; } .eb249 { background-color: #b2b2b2; }
+.ef250 { color: #bcbcbc; } .eb250 { background-color: #bcbcbc; }
+.ef251 { color: #c6c6c6; } .eb251 { background-color: #c6c6c6; }
+.ef252 { color: #d0d0d0; } .eb252 { background-color: #d0d0d0; }
+.ef253 { color: #dadada; } .eb253 { background-color: #dadada; }
+.ef254 { color: #e4e4e4; } .eb254 { background-color: #e4e4e4; }
+.ef255 { color: #eeeeee; } .eb255 { background-color: #eeeeee; }
+
+.f9 { color: #000000; }
+.b9 { background-color: #FFFFFF; }
+.f9 > .bold,.bold > .f9, body.f9 > pre > .bold {
+  /* Bold is heavy black on white, or bright white
+     depending on the default background */
+  color: #000000;
+  font-weight: bold;
+}
+.reverse {
+  /* CSS doesnt support swapping fg and bg colours unfortunately,
+     so just hardcode something that will look OK on all backgrounds. */
+  color: #000000; background-color: #AAAAAA;
+}
+.underline { text-decoration: underline; }
+.line-through { text-decoration: line-through; }
+.blink { text-decoration: blink; }
+
+</style>
+</head>
+
+<body class="f9 b9">
+<pre>
+<span class="bold">diff --git a/index.slim b/index.slim</span>
+<span class="bold">index 491ba3d..2fa7ecf 100644</span>
+<span class="bold">--- a/index.slim</span>
+<span class="bold">+++ b/index.slim</span>
+<span class="f6">@@ -26,18 +26,25 @@</span> body
+             .pane_body 
+               .top_bar
+                 .title ABOUT
+<span class="f2">+                .director_box.marketing_override</span>
+<span class="f2">+                  .director_title</span><span class="b1"> </span>
+<span class="f2">+                    | Head of Marketing and &lt;br&gt;</span>
+<span class="f2">+                    | External Affiars</span>
+<span class="f2">+                  .director_name Kimberly Horn</span>
+<span class="f2">+                  a.director_email(href=&quot;mailto:cec.externalaffairs@gmail.com&quot;) cec.externalaffairs@gmail.com
+</span>                 .director_box.asscomm_override
+                   .director_title Assistant Commissioner
+                   .director_name Robert Osen
+<span class="f2">+                  a.director_email(href=&quot;mailto:cec.assistantcommissioner@gmail.com&quot;) cec.assistantcommissioner@gmail.com
+</span>                 .director_box.commish_override
+                   .director_title Commissioner
+                   .director_name Greg Kalfayan
+                   a.director_email(href=&quot;mailto:usac.cec@gmail.com&quot;) usac.cec@gmail.com
+               .pane_content 
+                 .left 
+<span class="f1">-                  | Since 1965 Campus Events Commission (CEC) has been one of the largest purveyors of campus entertainment. Since its inception, it has acquired a reputation for its edgy style and controversial events. As one of the thirteen branches of UCLA's Undergraduate Student Association, CEC is a student-run, student-funded organization, dedicated to bringing the freshest fare in film, music and speakers to the UCLA community. CEC is comprised of seven branches--three programming and four marketing--individually responsible for their own duties, but all ultimately work together as one cohesive unit to provide well-marketed, high quality entertainment.
+</span><span class="f2">+                  | Campus Events Commission (CEC) is one of the largest purveyors of UCLA campus entertainment. Since its 1965 inception, it has acquired a reputation for its edgy style and controversial events. As one of the thirteen branches of UCLA's Undergraduate Student Association, CEC is a student-run, student-funded organization, dedicated to bringing the freshest fare in film, music and speakers to the UCLA community. CEC is comprised of seven branches: three programming and four marketing.  Each is individually responsible for its own duties, but all ultimately work together as one cohesive unit to provide well-marketed, high quality entertainment.
+</span>                 .right 
+<span class="f1">-                  | From hosting weekly free-$ movies to showing films before they hit theatres, CEC has become the students' premiere source for new cinema. CEC also brings the best in music programming to students by providing free quarterly concerts in various venues throughout the UCLA campus. In addition to providing new films and music, CEC coordinates speaking events from an eclectic variety of dignitaries.  CEC is also responsible for hosting the prestigious Jack Benny and Spencer Tracy Award ceremonies as well as the renowned Shorttakes Student Film Festival. Be it media seen or heard, Campus Events Commission is constantly in search of what is as evocative and diverse as its audience.
+</span><span class="f2">+                  | From hosting weekly free movies to showing films before they hit theatres, CEC has become the students' premiere source for new cinema. CEC also brings the best in music programming to students by providing free concerts in various venues throughout the UCLA campus. In addition to providing new films and music, CEC coordinates speaking events from an eclectic variety of dignitaries.  CEC is also responsible for hosting the prestigious Jack Benny and Spencer Tracy Award ceremonies as well as the renowned Shorttakes Student Film Festival. Be it media seen or heard, Campus Events Commission is constantly in search of what is as evocative and diverse as its audience.</span>
+           #films.horizontal_pane.pane3
+             .pane_body 
+               .top_bar
+<span class="f6">@@ -48,30 +55,30 @@</span> body
+                   a.director_email(href=&quot;mailto:cec.films@gmail.com&quot;) cec.films@gmail.com
+               .pane_content 
+                 .left 
+<span class="f1">-                  | The Films staff organizes free movies and free sneaks that bring UCLA students weekly movies, often before they even come out in theaters.  CEC has become students' go-to source for new cinema, creating the perfect platform for word-of-mouth marketing. We screen movies in UCLA's Ackerman Grand Ballroom, a theatre-like auditorium with 1,000 seat capacity (though sneaks usually seat 200-600 depending on studio preference). Ackerman features 20' x 40' screen dimension, Dolby Stereo Sound, digital projector with Blu-Ray player, and 35mm screen capability with platter system, handled by our trained and experienced projectionists. We also offer the option to screen on DVD or off laptop with DVD/LCD projectors.
+</span><span class="f2">+                  | The Films staff organizes free cinema for students, including free sneaks of films before they even come out in theaters and advanced screenings of television series.  CEC has become students' go-to source for new cinema, creating the perfect platform for word-of-mouth marketing. Films are screened in UCLA's Ackerman Grand Ballroom, a theatre-like auditorium with 1,000 maximum capacity, configurable based on studio preference. It features a 20' x 40' screen, Dolby Stereo Sound, a digital projector with Blu-Ray player, and 35mm screen capability with a platter system, handled by our trained and experienced projectionists. The venue also offers the option to screen on DVD or off a laptop with an LCD projector.
+</span>                 .right 
+<span class="f1">-                  | In addition to screening these movies, we have also held occasional Q&amp;As with filmmakers and actors like Maggie Carey, Seth Rogen, Stephen Chbosky, Creed Batton, and others.</span>
+<span class="f2">+                  | In addition to screening these movies, CEC also holds occasional Q&amp;As with filmmakers and actors like Jason Bateman, Maggie Carey, Seth Rogen, Stephen Chbosky, Creed Batton, and others.</span>
+                   .smallgap
+                   .two_column_list
+                     .list_title Past sneaks:
+                     .leftcolumn
+                       ul
+<span class="f1">-                        li The Purge</span>
+<span class="f2">+                        li The Grand Budapest Hotel</span>
+<span class="f2">+                        li Neighbors</span>
+<span class="f2">+                        li 22 Jump Street</span>
+                         li Monsters University
+<span class="f1">-                        li The Heat</span>
+<span class="f2">+                        li USA's Suits</span>
+                         li Pain &amp; Gain
+<span class="f1">-                        li The Way, Way Back</span>
+                         li Olympus Has Fallen
+<span class="f1">-                        li A Good Day to Die Hard</span>
+                     .rightcolumn
+                       ul
+<span class="f1">-                        li Safe Haven</span>
+<span class="f2">+                        li Looper</span>
+                         li Gangster Squad
+<span class="f1">-                        li Warm Bodies</span>
+<span class="f2">+                        li HBO's Game of Thrones</span>
+<span class="f2">+                        li A Good Day to Die Hard</span>
+                         li Flight
+                         li Paranormal Activity 4
+                         li Sinister
+<span class="f1">-                        li Looper</span>
+           #festivals.horizontal_pane.pane4
+             .pane_body 
+               .top_bar
+<span class="f6">@@ -84,8 +91,8 @@</span> body
+                 .left 
+                   | CEC Festivals organizes two film festivals per school year. The first is 
+                   span.bold
+<span class="f1">-                    | Campus Moviefest</span>
+<span class="f1">-                  |, the world's largest student film festival. Campus Moviefest allows any UCLA student to film their own five minute movie by providing students with a camera, laptop, and other filming equipment for free. Winners within the UCLA circuit go on to have their films compete nationally and screened in Hollywood.  </span>
+<span class="f2">+                    | Campus MovieFest</span>
+<span class="f2">+                  |, the world's largest student film festival. Campus MovieFest allows UCLA students to film their own five minute movies by providing them with cameras, laptops, and other filming equipment for free. Winners within the UCLA circuit go on to have their films compete nationally and screened in Hollywood.</span><span class="b1">  </span>
+                   .smallgap
+                   | Visit 
+                   a(href=&quot;http://campusmoviefest.com/ucla&quot;)  
+<span class="f6">@@ -95,7 +102,7 @@</span> body
+                   | The other film festival that CEC organizes is the annual 
+                   span.bold 
+                     | Shorttakes Student Film Festival
+<span class="f1">-                  |. It is one of the largest student-run film festivals in the United States. Celebrities such as Tom Hanks (Cast- away, Toy Story Films), Nancy Cartwright (The Simpsons), Catherine Hardwicke (Twilight), and Nick Offerman (Parks and Recreation) are just some of the judges that have chosen winners of the festival.  Submissions are open for all short films produced and directed by undergraduate and graduate students.  </span>
+<span class="f2">+                  |. It is one of the largest student-run film festivals in the United States. Celebrities such as Tom Hanks (Cast- away, Toy Story Films), Nancy Cartwright (The Simpsons), Catherine Hardwicke (Twilight), and Nick Offerman (Parks and Recreation) are just some of the judges that have chosen winners of the festival.  Entrance is open to open for all short films produced and directed by undergraduate and graduate students.</span><span class="b1">  </span>
+                   .smallgap
+                   | Visit 
+                   a(href=&quot;http://cecshorttakes.com&quot;)
+<span class="f6">@@ -111,7 +118,7 @@</span> body
+                   a.director_email(href=&quot;mailto:cec.concerts@gmail.com&quot;) cec.concerts@gmail.com
+               .pane_content 
+                 .left 
+<span class="f1">-                  | The Concerts staff brings a great variety of artists to UCLA each year.  We provide an ideal opportunity for artists to generate support for tours, promote albums, and gain exposure in a key college market of over 40,000 students. Concerts are held in venues such as Ackerman Grand Ballroom, Bruin Plaza, Drake Stadium, Kerckhoff Grand Salon, and the renowned Pauley Pavilion. All of our concerts are free and for students only. We also provide sound equipment, tech crews, and on-campus promotion.</span>
+<span class="f2">+                  | The Concerts staff brings a great variety of artists to UCLA each year.  CEC provides an ideal opportunity for artists to generate support for tours, promote albums, and gain exposure in a key college market of over 40,000 students. Concerts are held in venues such as Ackerman Grand Ballroom, Bruin Plaza, Drake Stadium, Kerckhoff Grand Salon, and the renowned Pauley Pavilion. All of our concerts are free and for students only, and CEC can provide sound equipment, tech crews, and on-campus promotion.</span>
+                 .right 
+                   .two_column_list
+                     .list_title Past artists:
+<span class="f6">@@ -128,6 +135,8 @@</span> body
+                         li Beach House
+                     .rightcolumn
+                       ul
+<span class="f2">+                        li Macklemore &amp; Ryan Lewis</span>
+<span class="f2">+                        li Kendrick Lamar</span>
+                         li Diplo
+                         li Best Coast
+                         li Chairlift
+<span class="f6">@@ -135,8 +144,6 @@</span> body
+                         li Local Natives
+                         li Girl Talk
+                         li Young the Giant
+<span class="f1">-                        li Kendrick Lamar</span>
+<span class="f1">-                        li Macklemore &amp; Ryan Lewis</span>
+           #speakers.horizontal_pane.pane6
+             .pane_body 
+               .top_bar
+<span class="f6">@@ -147,7 +154,7 @@</span> body
+                   a.director_email(href=&quot;mailto:uclacec.speakers@gmail.com&quot;) uclacec.speakers@gmail.com
+               .pane_content 
+                 .left 
+<span class="f1">-                  | The Speakers staff is committed to providing an open forum for a diverse range of topics and speakers across multiple disciplines--from arts and entertainment, to politics and entrepreneurship, and everything in between. Our free speaking engagements range in scope from packed lectures and comedic performances to intimate conversations with the best and brightest thinkers and doers of today. Whether primarily educational or entertaining in nature, our events are always thought provoking.</span>
+<span class="f2">+                  | The Speakers staff is committed to providing an open forum for a diverse set of topics and speakers across disciplines.  Subjects range from arts and entertainment, to politics and government, to personal motivation and entrepreneurship and everything in between. Our free speaking engagements vary in size from packed lectures and comedic performances to intimate conversations with the best and brightest thinkers and doers of today. Whether primarily educational or entertaining in nature, our events are always thought-provoking and aimed at providing the best possible experience for students.</span>
+                 .right 
+                   .two_column_list
+                     .list_title Past speakers:
+<span class="f6">@@ -164,27 +171,26 @@</span> body
+                           i Workaholics
+                     .rightcolumn.light
+                       ul
+<span class="f1">-                        li Biz Stone</span>
+<span class="f1">-                        li Jon Gold</span>
+<span class="f2">+                        li RJ Mitte</span>
+<span class="f2">+                        li Morgan Freeman</span>
+<span class="f2">+                        li Alexis Ohanian</span>
+                         li Stan Lee
+                         li Pharrell
+                         li David Choe
+                         li Ronan Farrow
+<span class="f1">-                        li Morgan Freeman</span>
+           #gm.horizontal_pane.pane7
+             .pane_body 
+               .top_bar
+                 .title GENERAL MARKETING
+                 .director_box
+<span class="f1">-                  .director_title </span>
+<span class="f1">-                    ' Head of Marketing &lt;br&gt; and Communications</span>
+<span class="f1">-                  .director_name Kim Horn</span>
+<span class="f1">-                  .director_title General Marketing Director</span>
+<span class="f2">+                  .director_title Director of General Marketing</span>
+                   .director_name Nicole Nour
+                   a.director_email(href=&quot;mailto:cec.generalmarketing@gmail.com&quot;) cec.generalmarketing@gmail.com
+               .pane_content 
+                 .left 
+<span class="f1">-                  | The General Marketing staff is the promotional hand of Campus Events Commission, in charge of promoting and informing students of any and all CEC programs. With an intrinsic understanding of student and market trends, a creative approach to marketing solutions, and a set of core values combining corporate professionalism with guerrilla sensibilities, the General Marketing staff prides themselves on the ability to take any event and make it a success. The General Marketing staff is also responsible for the brand management of CEC as a whole, working to foster the CEC image and name as a relevant and vibrant source of college entertainment.</span>
+<span class="f2">+                  | The General Marketing staff is the on-the-ground promotional hand of Campus Events Commission, in charge of promoting and informing students of any and all CEC programs. With an intrinsic understanding of student and market trends, a creative approach to marketing solutions, and a set of core values combining corporate professionalism with guerrilla sensibilities, the General Marketing staff prides themselves on the ability to take any event and make it a success.</span><span class="b1"> </span>
+<span class="f2">+                .right</span>
+<span class="f2">+                  | Key General Marketing duties include advertising on campus, managing and distributing our promotion and branding materials, and cultivating business relationships for promotions.  The General Marketing staff is also responsible for the brand management of CEC as a whole, working to foster the CEC image and name as a relevant and vibrant source of college entertainment.</span>
+           #om.horizontal_pane.pane8
+             .pane_body 
+               .top_bar
+<span class="f6">@@ -195,16 +201,17 @@</span> body
+                   a.director_email(href=&quot;mailto:cec.onlinemarketing@gmail.com&quot;) cec.onlinemarketing@gmail.com
+               .pane_content 
+                 .left 
+<span class="f1">-                  | The Online Marketing staff is in charge of all things web-related, ncluding the </span>
+<span class="f2">+                  | Tasked with cultivating a strong digital brand and creating online advertising that's useful and delightful, the Online Marketing staff is in charge of all things web-related, including the</span><span class="b1"> </span>
+                   a(href=&quot;http://campusevents.ucla.edu&quot;) CEC website and blog
+<span class="f1">-                  |, websites for special events, and CEC's social media presence. Online Marketing sends out weekly newsletters highlighting upcoming events, which reach over 6,000 subscribers. Online Marketing keeps audiences entertained and nformed by posting relevant facts, links, and videos to the </span>
+<span class="f2">+                  |, websites for special events, and CEC's social media presence. Online Marketing sends out weekly newsletters highlighting upcoming events, which reach over 6,000 subscribers. Online Marketing keeps audiences entertained and informed by posting relevant facts, links, and videos to the</span><span class="b1"> </span>
+                   a(href=&quot;http://twitter.com/uclacec&quot;) CEC Twitter
+                   |, which has over 2,000 followers, and the 
+                   a(href=&quot;http://facebook.com/campusevents&quot;) CEC Facebook page
+<span class="f1">-                  |, which has over 8,000 likes. You can also find the staff live-tweeting events, posting photos of the stars and attendees on our </span>
+<span class="f2">+                  |, which has over 9,000 likes.</span><span class="b1"> </span>
+<span class="f2">+                .right</span><span class="b1"> </span>
+<span class="f2">+                  | You can also find the staff live-tweeting events, posting photos of the stars and attendees on our</span><span class="b1"> </span>
+                   a(href=&quot;http://instagram.com/uclacec&quot;) CEC Instagram account
+                   |, and conducting online contests and giveaways.
+<span class="f1">-                .right </span>
+                   | Additionally, Online Marketing is responsible for creating Eventbrite pages to handle event reservations and collect data about event attendees, allowing for improved targeted marketing and analysis of each event's demographic for better event planning in the future.
+           #print.horizontal_pane.pane9
+             .pane_body 
+<span class="f6">@@ -216,7 +223,7 @@</span> body
+                   a.director_email(href=&quot;mailto:cec.printmarketing@gmail.com&quot;) cec.printmarketing@gmail.com
+               .pane_content 
+                 .left 
+<span class="f1">-                  | Campus Events Commission's Print Marketing staff is a compilation of student designers from the UCLA campus. Print Marketing creates the identity for each concert, film, and speaker event, as well as various CEC brand material. This staff works closely with General Marketing and Online Marketing in order to create a cohesive campaign across all platforms. Their work can be seen in flyers, posters, and online through our social media outlets.</span>
+<span class="f2">+                  | Campus Events Commission's Print Marketing staff is an expert group of student designers from the UCLA campus. Print Marketing creates the promotional images and visual identity for each concert, film, and speaker event, as well as for CEC as a whole. This staff works closely with General Marketing and Online Marketing in order to create a cohesive campaign across all platforms. Their work can be seen in flyers, posters, and online in CEC's various social media accounts.</span>
+           #media.horizontal_pane.pane10
+             .pane_body 
+               .top_bar
+<span class="f6">@@ -227,7 +234,7 @@</span> body
+                   a.director_email(href=&quot;mailto:cec.mediaproduction@gmail.com&quot;) cec.mediaproduction@gmail.com
+               .pane_content 
+                 .left 
+<span class="f1">-                  | The Campus Events Commission's Media Production staff is the newest marketing branch and brings together filmmakers to create promotional videos for our events. Our approach is to use social media outlets such as Facebook and YouTube to allow students to interact with us. In addition to other media-related work, Media Production photographers and videographers cover all our events so that students can easily look back on their experience. We're pretty much like the paparazzi, except not as annoying.</span>
+<span class="f2">+                  | The Campus Events Commission's Media Production staff is the newest marketing branch and brings together filmmakers and marketing experts to create promotional videos for oncampus events. Media Production works closely with Online Marketing to provide opportunities for students to interact with CEC videos on YouTube, Vine, and Facebook. In addition to other media-related work, Media Production photographers and videographers cover all events so that students can easily look back on their experience.</span><span class="b1"> </span>
+           #contact.horizontal_pane.pane11
+             .pane_body 
+               .top_bar
+<span class="f6">@@ -245,7 +252,7 @@</span> body
+                   .smallgap
+                   span.bold General Inquiries:
+                   p 
+<span class="f1">-                    a(href=&quot;mailto:cec.onlinemarketing@gmail.com&quot;) cec.onlinemarketing@gmail.com</span>
+<span class="f2">+                    a.unbold(href=&quot;mailto:cec.onlinemarketing@gmail.com&quot;) cec.onlinemarketing@gmail.com</span>
+                 .right 
+                   .contact_split
+                     .column.leftcolumn
+<span class="f6">@@ -253,11 +260,11 @@</span> body
+                       p 
+                         a(href=&quot;http://campusevents.ucla.edu&quot;) campusevents.ucla.edu
+                       .smallgap
+<span class="f1">-                      span.bold Facebook</span>
+<span class="f2">+                      span.bold Facebook:</span>
+                       p 
+                         a(href=&quot;http://facebook.com/campusevents&quot;) facebook.com/campusevents
+                       .smallgap
+<span class="f1">-                      span.bold Twitter</span>
+<span class="f2">+                      span.bold Twitter:</span>
+                       p 
+                         a(href=&quot;http://twitter.com/uclacec&quot;) twitter.com/uclacec
+                     .column.rightcolumn
+</pre>
+</body>
+</html>
