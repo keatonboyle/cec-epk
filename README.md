@@ -1,3 +1,15 @@
+= Compiling the EPK =
+== Slim to HTML ==
+To make html changes, make changes to index.slim, and then run
+    slimrb index.slim index.html
+to compile to HTML.  (you'll need to install slim)
+
+To make css changes, make changes to scss/style.scss, and then run
+    sass scss/:css/
+Or run
+    sass --watch scss/:css/
+in the background as you make changes to update in realtime.
+
 = Cloning and deploying the EPK =
     # (run on your local *nix machine, or the equivalent windows commands)
 
@@ -24,4 +36,4 @@
     # and then head back to master to hack again
     git checkout master
 
-Reach to keatonboyle@gmail.com w/ questions
+Reach out to keatonboyle@gmail.com w/ questions
