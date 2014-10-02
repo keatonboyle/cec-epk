@@ -22,7 +22,7 @@ in the background as you make changes to update in realtime.
     # hack hack hack
 
     git commit -am "message"
-    git push master
+    git push origin master
     # now master is updated, we can collaborate, etc, but users can't see it
 
     # update the live branch with the changes
